@@ -15,3 +15,8 @@ gem 'sqlite3-ruby', :require => "sqlite3"
 
 # Padrino
 gem 'padrino', "0.9.14"
+
+group :production
+  gem 'bundler', '0.9.9'
+  gem 'pg'
+end
