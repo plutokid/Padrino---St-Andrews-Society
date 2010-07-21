@@ -1,0 +1,59 @@
+- bgcolor = cycle("#D7DFE2", "#FFF")
+%table{ :colspan => "4", :bgcolor => bgcolor } 
+  %tr
+    %td{ :width => "30" }
+      %p{ :align => "center" }
+        %img{ :src => "/imgs/gavel2.png", :align => "top" }
+    %td{ :width => "550", :height => "20" }
+      %p{ :align => "justify" }
+        %span.littlered
+          %b 
+            = item.title
+%table{ :colspan => "4", :bgcolor => bgcolor } 
+  %tr{ :height => "5" }
+  %tr
+    %td{ :width => "30" }
+    %td{ :width => "160", :height => "20", :valign => "top" }
+      %img{ :src => "/imgs/#{item.image_name}", :align => "top" }
+    %td{ :width => "379", :height => "20", :valign => "top" }
+      %span.bid
+        %b 
+          Current High Bid:
+          = item.highest_bid
+        %br
+        %b 
+          Bidder: 
+          = item.highest_bidder
+      %p{ :align => "justify" }
+        %span.toplinks
+          %p
+          %b Item Description: 
+          = item.description1
+          %p
+            = item.description2 unless item.description2.blank?
+      %p{ :align => "center" }
+        - form_for :bid, '/members/online_auction/new_bid' do |f| 
+          %span.toplinks
+            %table{ :colspan => "3" }
+              %tr
+                %td{ :width => "100" }
+                  %p{ :align => "right" }
+                    %b Place your bid:
+                %td{ :width => "5" }
+                %td
+                  = f.hidden_field :auction_item_id, :value => item.id
+                  = f.text_field :amount, :value => "$00.00", :class => "cleardefault", :size => "20" 
+              %tr
+                %td{ :width => "100" }
+                  %p{ :align => "right" }
+                    %b Your name:
+                %td{ :width => "5" }
+                %td
+                  = f.text_field :bidder, :value => "Full Name", :class => "cleardefault", :size => "20" 
+              %tr
+                %td{ :width => "100" }
+                %td{ :width => "5" }
+                %td
+                  %input{ :type => "submit", :value => "Submit" }
+      %br
+    %td{ :width => "11" }

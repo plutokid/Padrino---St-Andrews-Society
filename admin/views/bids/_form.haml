@@ -1,0 +1,25 @@
+.group
+  =f.label :amount
+  %span.red *required
+  =f.error_message_on :amount
+  =f.text_field :amount, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :bidder
+  %span.red *required
+  =f.error_message_on :bidder
+  =f.text_field :bidder, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :auction_item_id
+  %span.red *required
+  =f.error_message_on :auction_item_id
+  =f.text_field :auction_item_id, :class => :text_field
+  %span.description Ex: a simple text
+
+
+.group.navform.wat-cf
+  =f.submit pat(:save), :class => :button
+  =f.submit pat(:cancel), :onclick => "window.location='#{url(:bids, :index)}';return false", :class => :button

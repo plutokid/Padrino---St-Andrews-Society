@@ -1,0 +1,39 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active=link_to pat(:list), url(:auction_items, :index)
+      %li=link_to pat(:new), url(:auction_items, :new)
+  .content
+    %h2.title
+      All Auction Items (
+      = @total_of_bids
+      )
+    .inner
+      %table.table
+        %tr
+          %th.first=mat(:auction_item, :title)
+          %th High Bid
+          %th High Bidder
+          %th Number of Bids
+          %th Description 1
+          %th Description 2
+          %th Image
+          %th.last="&nbsp;"
+        -@auction_items.each do |auction_item|
+          %tr
+            %td.first=auction_item.title
+            %td=auction_item.bids.last.amount
+            %td=auction_item.bids.last.bidder
+            %td=auction_item.bids.count-1
+            %td=auction_item.description1
+            %td=auction_item.description2
+            %td 
+              %img{ :src => "/imgs/#{auction_item.image_name}", :border=> "no", :width => "100" }
+            %td.last
+              =button_to pat(:edit), url(:auction_items, :edit, :id => auction_item.id), :method => :get, :class => :button_to
+              ="|"
+              =button_to pat(:delete), url(:auction_items, :destroy, :id => auction_item.id), :method => :delete, :class => :button_to
+      .actions-bar.wat-cf
+        .actions="&nbsp;"
+
+-content_for :sidebar, partial("base/sidebar")

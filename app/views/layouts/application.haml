@@ -1,0 +1,74 @@
+!!!
+%html
+  %head
+    %title= [@title, "Saint Andrews Society of the Middle South | sasmiddlesouth.org"].compact.join(" | ")
+    %link{:rel => "shortcut icon", :href => "/imgs/favicon.png" }
+    %link{:rel => "icon", :href => "/imgs/favicon.png" }
+    = stylesheet_link_tag 'stylesheet'
+    %meta{:"http-equiv" => "Content-Type", :content => "text/html"}
+    %meta{:name => "keywords", :content => "ryan,morrison,bagpipe,bagpipers,bagpipes,pipes,piper,pipers,hire,book,booking,bookings,wedding,heritage,pipe,funeral,memorial,service,birmingham,alabama,scottish,scotch,irish,scot,scots,highland,perform,performance,ceremony,Birmingham,Birminghambagpiper.com,bagpipe,bagpipes,bag,pipe,piping,piper,band,solo,hire,highland,games,info,information,instruct,teach,teacher,learn,instruction,heritage,Scottish,Scotland,Scot,Scotia,Irish,Eire,Ireland,Celt,Celtic,Birmingham,Alabama,AL,Vestavia,Hills,HP&amp;D,HPD,kilt,chanter,practice,lessons,lesson,instructor,city,stages,great,drums,hire,employ"}
+    :javascript
+      function showImg(imgSrc, H, W, Caption) {
+        var newImg = window.open("","myImg",config="height="+H+",width="+W+"")
+        newImg.document.write("<title>"+ Caption +"</title>")
+        newImg.document.write("<img src='"+ imgSrc +"' height='"+ H +"' width='"+ W +"' onclick='window.close()' style='position:absolute;left:0;top:0'>")
+        newImg.document.write("<script type='text/javascript'> document.oncontextmenu = new Function(\"return false\") </sc"+"ript>")
+        newImg.document.close() }
+    %script{:type => "text/javascript", :src  => "/js/util-functions.js" }
+    %script{:type => "text/javascript", :src  => "/js/clear-default-text.js"}
+  %body 
+    %center
+      %a{ :name => "#top", :id => "top" }
+      %table{ :valign => "top" }
+        %tr
+          %td{ :width => "800", :valign => "top" }
+            %table
+              %tr
+                %td{ :width => "800", :height => "195", :background => "/imgs/#{@title_image}" }
+            %table{ :background => "/imgs/titlebottom.png", :colspan => "4" }
+              %tr
+                %td{ :width => "210", :height => "65" }
+                %td{ :width => "290", :height => "65" }
+                  %span.toplinks
+                    %p{ :align => "left" }
+                      %b= "You are here :: #{@title}"
+                %td{ :width => "290", :height => "65" }
+                  %span.toplinks
+                    %p{ :align => "right" }
+                      Quicklinks :: 
+                      %a{ :href => "mailto:info@sasmiddlesouth.org" } Email 
+                      | 
+                      %a{ :href => "mailto:webmajor@sasmiddlesouth.org" } Webmajor
+                %td{ :width => "10", :height => "65" }
+            %table
+              %tr
+                %td{ :width =>"800", :height => "20" }
+            = yield
+      %table
+        %tr
+          %td{ :width =>"800", :height => "50" }
+      %table
+        %tr
+          %td{ :width => "800", :height => "1", :bgcolor => "#C1D0C8" }
+      %table{ :width => "800", :colspan => "4" }
+        %tr
+          %td{ :width => "60" }
+            %p{ :align => "left" }
+              %img{ :src => "/imgs/sasbadge.png" }
+          %td{ :width => "360" }
+            %span.btmlinks
+              %p{ :align => "left" }
+                &copy; Copyright 2009 :: The Saint Andrews Society of the Middle South.
+                %br
+                All rights reserved.
+                %br
+                Powered by 
+                %a{ :href => "http://piperproductions.info/", :target => "_blank" } PIPER PRODUCTIONS
+          %td{ :width => "20" }
+          %td{ :width => "360" }
+            %span.btmlinks
+              %p{ :align => "right" }
+                All images used on this website with the exception of the Saint Andrews Society badge and banner are available license-free from the
+                %br
+                %a{ :href => "http://commons.wikimedia.org/", :target => "_blank" } Wikimedia Commons. 
+                %a{ :href => "http://creativecommons.org/licenses/by-sa/3.0/", :target => "_blank" } View licensing information.

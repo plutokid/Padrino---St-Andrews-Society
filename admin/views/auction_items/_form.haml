@@ -1,0 +1,31 @@
+.group
+  =f.label :title
+  %span.red *required
+  =f.error_message_on :title
+  =f.text_field :title, :class => :text_field
+  %span.description Ex: 40-yo scotch bottle (not Glenfiddich)
+
+.group
+  =f.label "Paragraph 1"
+  %span.red *required
+  =f.error_message_on :description1
+  =f.text_area :description1, :class => :text_area
+  %span.description Ex: a simple text paragraph
+
+.group
+  =f.label "Paragraph 2"
+  =f.error_message_on :description2
+  =f.text_area :description2, :class => :text_area
+  %span.description Ex: a simple text paragraph
+
+.group
+  =f.label :image_name
+  %span.red *required
+  =f.error_message_on :image_name
+  =f.text_field :image_name, :class => :text_field
+  %span.description Ex: auction1.png
+
+
+.group.navform.wat-cf
+  =f.submit pat(:save), :class => :button
+  =f.submit pat(:cancel), :onclick => "window.location='#{url(:auction_items, :index)}';return false", :class => :button

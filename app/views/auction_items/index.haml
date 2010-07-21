@@ -1,0 +1,56 @@
+%table{ :colspan => "3" }
+  %tr
+    = partial 'members/sidemenu'
+    %td{ :width => "600", :height => "220", :valign => "top" }
+      %table{ :colspan => "3" }
+        %tr
+          %td{ :width => "12", :height => "20", :background => "/imgs/whtTLcorner.png" }
+          %td{ :width => "576", :height => "20", :bgcolor => "#F9F9F9" }
+          %td{ :width => "12", :height => "20", :background => "/imgs/whtTRcorner.png" }
+
+      %table
+        %tr
+          %td{ :width => "10", :bgcolor => "#F9F9F9" }
+          %td{ :width => "580", :height => "163", :valign => "top", :bgcolor => "#F9F9F9" }
+            - if flash[:error]
+              %center
+                %span.errors
+                  = flash[:error] 
+              %br
+            - if flash[:notice]
+              %center
+                %span.notice
+                  = flash[:notice] 
+              %br       
+            %span.bigred 
+              Heritage Night Online Auction
+            %span.toplinks
+              %p{ :align => "justify" }
+                Welcome to the Saint Andrews Society of the Middle South's Online Auction page! The Society is hosting this inaugural online auction in conjuction with Heritage Night 2010, the Society's annual fundraiser for the Ian Sturrock Memorial Pipe Band.      
+              %p{ :align => "justify" }
+                As a primary sponsor for the Ian Sturrock Memorial Pipe Band, the Saint Andrews Society works to raise money to cover the operating expenses necessary for various band activities, such as traveling to competitions, outfitting the members of the band, and purchasing and maintaining equipment. However, money collected from these items will also go to fund the pipe band's first trip to the World Pipe Band Championships held in Glasgow, Scotland in August of 2013. 
+              %p{ :align => "justify" }
+                Bidding on the Online Auction will begin at 
+                %b 3:00 PM CST Friday, September 3rd 2010
+                \. The bidding for all items online will close at 
+                %b 11:59 PM CST Thursday, October 14th 2010
+                \. 
+              %p{ :align => "justify" }
+                %b Once a bid is placed on an item it cannot be canceled, so please bid carefully. You must enter your full name in order to submit a bid.
+              %p{ :align => "justify" }
+                Online auction winners will be contacted within 48 hours of the close of the auction to collect payment for auction items and to arrange delivery. Buyer will assume any shipping costs.
+
+            = partial 'auction_items/item', :collection => @items
+         
+            %p{ :align => "right" }
+              %span.toplinks
+                %b
+                  %a{ :href => "online_auction#top"} 
+                    %img{ :src => "/imgs/top.png", :border => "no" }
+                      Return to the Top
+          %td{ :width => "10", :bgcolor => "#F9F9F9" }
+      %table{ :colspan => "3" }
+        %tr
+          %td{ :width => "12", :height => "20", :background => "/imgs/whtBLcorner.png" }
+          %td{ :width => "576", :height => "20", :bgcolor => "#F9F9F9" }
+          %td{ :width => "12", :height => "20", :background => "/imgs/whtBRcorner.png" }

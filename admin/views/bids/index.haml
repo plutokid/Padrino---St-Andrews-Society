@@ -1,0 +1,28 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active=link_to pat(:list), url(:bids, :index)
+      %li=link_to pat(:new), url(:bids, :new)
+  .content
+    %h2.title
+      All Bids
+    .inner
+      %table.table
+        %tr
+          %th.first=mat(:bid, :amount)
+          %th=mat(:bid, :bidder)
+          %th Auction Item
+          %th.last="&nbsp;"
+        -@bids.each do |bid|
+          %tr
+            %td.first=bid.amount
+            %td=bid.bidder
+            %td=bid.auction_item.title
+            %td.last
+              =button_to pat(:edit), url(:bids, :edit, :id => bid.id), :method => :get, :class => :button_to
+              ="|"
+              =button_to pat(:delete), url(:bids, :destroy, :id => bid.id), :method => :delete, :class => :button_to
+      .actions-bar.wat-cf
+        .actions="&nbsp;"
+
+-content_for :sidebar, partial("base/sidebar")

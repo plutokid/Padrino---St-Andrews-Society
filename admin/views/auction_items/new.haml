@@ -1,0 +1,14 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first=link_to pat(:list), url(:auction_items, :index)
+      %li.active=link_to pat(:new), url(:auction_items, :new)
+  .content
+    %h2.title
+      =pat(:new)
+      =mt(:auction_item)
+    .inner
+      -form_for :auction_item, url(:auction_items, :create), :class => :form do |f|
+        =partial "auction_items/form", :locals => { :f => f }
+
+-content_for :sidebar, partial("base/sidebar")
