@@ -1,0 +1,7 @@
+This was a site built in 2010 to allow uploading of items to be auctioned off.
+
+The visitor could view the items and bid on each item.
+
+The admin could view a count of bids and also how much the auction had yielded.
+
+Site hosted on Heroku for duration of auction.

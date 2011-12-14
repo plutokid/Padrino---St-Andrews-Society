@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/controllers/bids.rb</string>
+	<string>config/database.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -103,7 +103,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>17</integer>
+			<integer>0</integer>
 		</dict>
 		<key>app/views/auction_items/index.haml</key>
 		<dict>
@@ -175,6 +175,76 @@
 			<key>firstVisibleLine</key>
 			<integer>1</integer>
 		</dict>
+		<key>config.ru</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>config/database.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>db/migrate/001_create_accounts.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>db/migrate/002_create_auction_items.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>db/migrate/003_create_bids.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>db/schema.rb</key>
 		<dict>
 			<key>caret</key>
@@ -211,6 +281,11 @@
 		<string>app/views/members/dashboard.haml</string>
 		<string>app/views/auction_items/index.haml</string>
 		<string>app/views/auction_items/_item.haml</string>
+		<string>config.ru</string>
+		<string>db/migrate/001_create_accounts.rb</string>
+		<string>db/migrate/002_create_auction_items.rb</string>
+		<string>db/migrate/003_create_bids.rb</string>
+		<string>config/database.rb</string>
 		<string>app/controllers/bids.rb</string>
 		<string>app/models/auction_item.rb</string>
 		<string>db/schema.rb</string>
